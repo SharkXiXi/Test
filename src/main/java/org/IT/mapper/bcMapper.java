@@ -1,8 +1,10 @@
 package org.IT.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.IT.Entity.bc;
+import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Component;
-import org.IT.Entity.user;
+
+@Mapper
 @Component
-public interface testMapper extends BaseMapper<user> {
-}
+public interface bcMapper extends BaseMapper<bc> {}
