@@ -1,6 +1,8 @@
 package org.IT.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import org.IT.Entity.bc;
+import org.IT.service.bcService;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,10 +12,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.IT.Entity.bc;
-import org.IT.service.bcService;
+
 import java.util.List;
 
+//李擎熹
 @RestController
 @RequestMapping("stocks")
 public class bcController {
@@ -28,6 +30,7 @@ public class bcController {
         }else wrapper = null;
         return bcService.list(wrapper);
     }
+
     //新增
     @RequestMapping("/add")
     public ResponseEntity<String> add(@RequestBody bc bc){
